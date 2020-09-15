@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "d66f18cb-602a-496d-8ea2-b1b45934968d",
+		"name": "coll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post online user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"dummy1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://xhub-balance-calculator.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"xhub-balance-calculator",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post user Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"group2\",\r\n    \"members\" : [{\r\n        \"user\": \"5f609bb97794e5509c8bed8c\",\r\n        \"balance\": 10\r\n    },\r\n    {\r\n        \"user\": \"5f609bb97794e5509c8bed8c\"\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/groups",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post online group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"group1\",\r\n    \"members\" : [{\r\n        \"user\": \"5f60b38945659d0017a895ad\",\r\n        \"balance\": 10\r\n    },\r\n    {\r\n        \"user\": \"5f60b38945659d0017a895ad\"\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://xhub-balance-calculator.herokuapp.com/groups",
+					"protocol": "https",
+					"host": [
+						"xhub-balance-calculator",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get online user Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"group2\",\r\n    \"members\" : [{\r\n        \"user\": \"5f609bb97794e5509c8bed8c\",\r\n        \"balance\": 10\r\n    },\r\n    {\r\n        \"user\": \"5f609bb97794e5509c8bed8c\"\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://xhub-balance-calculator.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"xhub-balance-calculator",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get online groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xhub-balance-calculator.herokuapp.com/groups/5f60b39445659d0017a895ae",
+					"protocol": "https",
+					"host": [
+						"xhub-balance-calculator",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"groups",
+						"5f60b39445659d0017a895ae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get local group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/groups/5f60b4ec91bb8b65243c258e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"5f60b4ec91bb8b65243c258e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch group",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"balance\": 15,\r\n    \"user\": \"5f60b38945659d0017a895ad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/groups/5f60b4ec91bb8b65243c258e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"groups",
+						"5f60b4ec91bb8b65243c258e"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
